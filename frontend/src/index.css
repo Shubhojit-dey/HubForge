@@ -1,0 +1,13 @@
+/* index.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242424; /* light grey background */
+  color: #f0f0f0; /* light text color */
+  font-family: sans-serif;
+}

@@ -1,0 +1,116 @@
+/* Navbar.css */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0d1117; /* GitHub dark gray */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #30363d;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+nav > a > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav img {
+  height: 32px;
+  width: 32px;
+}
+
+nav h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+nav div:last-child {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* --- Dropdown Menu Styling --- */
+
+.profile-dropdown {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  color: #c9d1d9;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background-color: #21262d;
+  color: white;
+}
+
+/* Optional: Divider line between items */
+.dropdown-menu a:not(:last-child),
+.dropdown-menu button:not(:last-child) {
+  border-bottom: 1px solid #30363d;
+}
