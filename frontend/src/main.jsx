@@ -17,6 +17,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Profile from "./components/user/Profile";
 import StaredRepo from "./components/user/StaredRepo.jsx"; // Importing StaredRepo component
 import Navbar from "./components/Navbar.jsx";
+import CreateRepo from "./components/repo/CreateRepo.jsx"; // Importing CreateRepo component
 
 // 🧠 Merged ProjectRoutes into here
 const AppRoutes = () => {
@@ -48,6 +49,7 @@ const AppRoutes = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/starred" element={<StaredRepo />} />
+        <Route path="/create" element={<CreateRepo />} /> // Adding new route for CreateRepo component
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

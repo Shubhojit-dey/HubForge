@@ -1,0 +1,57 @@
+.staredrepo-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 40px;
+  overflow-y: auto;
+}
+
+.starred-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  background-color: #0d1117;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  color: #c9d1d9;
+}
+
+.starred-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #58a6ff;
+}
+
+.repo-card {
+  background-color: #161b22;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(21, 26, 34, 0.8);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  color: #adbac7;
+}
+
+.repo-card:hover {
+  transform: translateY(-4px);
+  background-color: #21262d;
+}
+
+.repo-card h3 {
+  margin: 0;
+  color: #58a6ff;
+  font-size: 1.2rem;
+}
+
+.repo-card p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #8b949e;
+}
