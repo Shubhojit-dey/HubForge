@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // ✅ import navigation
-import "./createRepo.css";
+import "./CreateRepo.css";
 
 const CreateRepo = () => {
   const [name, setName] = useState("");
