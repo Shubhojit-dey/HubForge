@@ -14,7 +14,7 @@ function StaredRepo() {
 
     const fetchStarredRepos = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/starredRepos/${userId}`);
+        const response = await fetch(`https://hubforge.onrender.com/starredRepos/${userId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch starred repositories");
         }

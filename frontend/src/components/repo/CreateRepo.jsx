@@ -26,7 +26,7 @@ const CreateRepo = () => {
         return;
       }
 
-      const res = await axios.post("http://localhost:8080/repo/create", {
+      const res = await axios.post("https://hubforge.onrender.com/repo/create", {
         name,
         description,
         content: [content], // wrap in array (because your model expects array)

@@ -21,7 +21,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:8080/signup", {
+      const response = await axios.post("https://hubforge.onrender.com/signup", {
         username: username,
         email: email,
         password: password,

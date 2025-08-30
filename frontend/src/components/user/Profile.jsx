@@ -19,7 +19,7 @@ const Profile = () => {
     const fetchUserProfile = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/userProfile/${userId}`
+          `https://hubforge.onrender.com/userProfile/${userId}`
         );
 
         // If API returns { user: {...} }
@@ -36,7 +36,7 @@ const Profile = () => {
     const fetchRepositories = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/repo/user/${userId}`
+          `https://hubforge.onrender.com/repo/user/${userId}`
         );
         setRepositories(res.data);
       } catch (err) {
@@ -52,7 +52,7 @@ const Profile = () => {
   const handleUpdateRepo = async (repoId) => {
     try {
       const res = await axios.put(
-        `http://localhost:8080/repo/update/${repoId}`,
+        `https://hubforge.onrender.com/repo/update/${repoId}`,
         {
           name: updatedName,
           description: updatedDesc,
@@ -70,7 +70,7 @@ const Profile = () => {
   // Handle Delete Repo
   const handleDeleteRepo = async (repoId) => {
     try {
-      await axios.delete(`http://localhost:8080/repo/delete/${repoId}`);
+      await axios.delete(`https://hubforge.onrender.com/repo/delete/${repoId}`);
       setRepositories((prev) => prev.filter((repo) => repo._id !== repoId));
     } catch (err) {
       console.error("Failed to delete repo:", err);

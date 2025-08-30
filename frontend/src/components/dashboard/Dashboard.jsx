@@ -21,7 +21,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/repo/user/${userId}`
+          `https://hubforge.onrender.com/repo/user/${userId}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch repositories");
@@ -35,7 +35,7 @@ const Dashboard = () => {
 
     const fetchSuggestRepositories = async () => {
       try {
-        const response = await fetch("http://localhost:8080/repo/all");
+        const response = await fetch("https://hubforge.onrender.com/repo/all");
         if (!response.ok) {
           throw new Error("Failed to fetch suggested repositories");
         }
@@ -65,7 +65,7 @@ const Dashboard = () => {
     try {
       const userId = localStorage.getItem("userId");
 
-      const res = await axios.post("http://localhost:8080/user/toggleStar", {
+      const res = await axios.post("https://hubforge.onrender.com/user/toggleStar", {
         userId,
         repoId: repo._id,
       });
@@ -87,7 +87,7 @@ const Dashboard = () => {
     const fetchStarredRepos = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/user/starredRepos/${userId}`
+          `https://hubforge.onrender.com/user/starredRepos/${userId}`
         );
         const starredRepoIds = res.data.starredRepos.map((repo) => repo._id); // store only IDs
         setStarredRepos(starredRepoIds);
